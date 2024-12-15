@@ -89,6 +89,5 @@ http://localhost:8080/swagger-ui.html
 - Support for multiple users managing their own tasks
 - Integration with frontend UI
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+
 
