@@ -18,7 +18,6 @@ The **Task Tracker API** is a RESTful service for managing tasks. It supports op
 ## Technologies Used
 - **Spring Boot**: Backend framework
 - **Swagger/OpenAPI**: API documentation
-- **H2 Database**: In-memory database for testing
 - **PostgreSQL**: Primary database for production
 - **Java**: Programming language
 
@@ -47,14 +46,7 @@ The **Task Tracker API** is a RESTful service for managing tasks. It supports op
    mvn spring-boot:run
    ```
 
-### Testing with H2
-To use the in-memory H2 database for testing, ensure the following settings in `application.properties`:
-```properties
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-spring.jpa.hibernate.ddl-auto=create
+
 ```
 
 ## API Endpoints
@@ -77,8 +69,9 @@ Here’s an example of a task object for POST or PUT requests:
 ```json
 {
   "taskName": "Complete API documentation",
+  "taskData":"Description about the task",
   "priority": "HIGH",
-  "deadline": "2024-12-31",
+  "deadLine": "2024-12-31",
   "creationDate": "2024-12-14",
   "completed": false
 }
